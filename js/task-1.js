@@ -1,11 +1,9 @@
-
-  
-function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
-  const totalPrice = ((orderedQuantity * pricePerDroid) + deliveryFee)
-  const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`
+function makeTransaction(quantity, pricePerDroid) {
+  const totalPrice = (quantity * pricePerDroid)
+  const message = `You ordered ${quantity} droids worth ${totalPrice} credits.`
   
   return message;
 }
-console.log(makeOrderMessage(2, 100, 50))
-console.log(makeOrderMessage(4, 300, 100))
-  console.log(makeOrderMessage(10, 70, 200))
+console.log(makeTransaction(5, 3000))
+console.log(makeTransaction(3, 1000))
+console.log(makeTransaction(10, 500))
